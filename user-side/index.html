@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <title>user-side</title>
+</head>
+<body>
+ 
+  <section>
+  <nav style="padding: 0.2rem;">
+     <!-- Hamburger Icon -->
+  <div class="hamburger">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+   <!-- logo -->
+   <div class="logo">
+    <img src="logo.png"  style="padding: 0.5rem;">
+</div>
+
+ 
+
+
+  <!-- Menu Items -->
+  <ul class="nav-links">
+    <!-- <li><a href="#">Home</a></li> -->
+    <li>
+      
+      <a href="../recipe search/index.html"><button class="watch-btn">
+        <i class="fa-solid fa-play"></i> Watch Recipe
+      </button></a>
+    </li>
+    <li><a href="#">Your Order</a></li>
+    <!-- selet and option -->
+    <div>
+      <label for="foodName">Filter</label>
+      <select name="foodName" id="foodName">
+        <option value="all">All</option>
+        <option value="Chicken">Chicken</option>
+        <option value="mutton">Mutton</option>   
+        <option value="Vegetarian">Vegetarian</option>
+        <option value="Seafood">Sea-food</option>   
+        
+        <option value="pork">Pork</option>  
+        <option value="dessert">Dessert</option>
+      </select>
+    </div>
+  </ul>
+  <!-- search bar -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search meals...">
+    <i class="fa-solid fa-search"></i>
+</div>
+
+<!-- cart-icon -->
+    <div class="icon" id="icon">
+        <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+        <!-- <i class="fa-solid fa-heart"></i> -->
+        <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+    
+
+</nav>
+
+<!-- body -->
+<div id="container"></div>
+
+
+
+  <script src="index.js"></script>
+</body>
+</html>
+

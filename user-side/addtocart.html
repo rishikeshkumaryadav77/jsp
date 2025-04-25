@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart</title>
+</head>
+<body>
+  <h1>Your Cart</h1>
+  <div id="cart-container"></div>
+
+  <script >
+    let cartContainer = document.getElementById("cart-container");
+
+// Get cart from localStorage
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+if (cart.length === 0) {
+  cartContainer.innerHTML = "<p>Your cart is empty.</p>";
+} else {
+  cart.forEach((meal) => {
+    let card = document.createElement("div");
+
+    card.innerHTML = `
+      <img src="${meal.strMealThumb}" alt="${meal.strMeal}" width="150">
+      <h3>${meal.strMeal}</h3>
+      <p>Category: ${meal.strCategory}</p>
+      <p>Price: ${meal.price}/-</p>
+    `;
+
+    cartContainer.appendChild(card);
+  });
+}
+
+
+
+  </script> <!-- Link your JS file -->
+</body>
+</html>
